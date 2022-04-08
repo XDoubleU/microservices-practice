@@ -31,6 +31,13 @@ services:
       context: ./
     ports:
       - "4002:4002"
+  
+  order-service:
+    build: 
+      dockerfile: services/order-service/Dockerfile
+      context: ./
+    ports:
+      - "4003:5000"
 
   
 

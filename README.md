@@ -11,8 +11,7 @@ The purpose of this project was to practice building a microservice application 
 ## Requirements
  - PostGres (database)
  - FastAPI (api-gateway)
- - Flask (product-service)
- - Go (order-service)
+ - Flask (product-service & order-service)
  - Express.js (customer-service)
 
 ## Deployment
