@@ -5,7 +5,7 @@ The purpose of this project was to practice building a microservice application 
 ## Goals
 - Build a simple application with microservice architecture
 - Use different API-technologies
-- Use docker
+- Use Docker
 - Use GitHub actions for CI
 
 ## Requirements
