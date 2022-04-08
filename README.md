@@ -1,6 +1,6 @@
 # Microservices practice
 
-The purpose of this project was to practice building a microservice application using different technologies. The schematics can be found [here](#architecture).
+The purpose of this project was to practice building a microservice application using different technologies. The schematics can be found [here](docs).
 
 ## Goals
 - Build a simple application with microservice architecture
@@ -17,11 +17,3 @@ The purpose of this project was to practice building a microservice application 
 
 ## Deployment
 TODO
-
-
-## Architecture
-### Microservices
-<img src="docs/microservices_architecture.png" height="250">
-
-### Database
-<img src="docs/database_architecture.png" height="125">
