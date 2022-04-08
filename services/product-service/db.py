@@ -37,3 +37,13 @@ def add_product(name, price, stock):
     cur.close()
     conn.close()
     return product
+
+def update_product_stock(id, used):
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    cur.execute("UPDATE public.products SET stock = stock - %s WHERE id = %s RETURNING *", (used,id,))
+    conn.commit()
+    product = cur.fetchone()
+    cur.close()
+    conn.close()
+    return product

@@ -11,6 +11,11 @@ def get_products():
 def get_product(id):
     return jsonify(db.get_product(id))
 
+@app.route("/<id>", methods=['PATCH'])
+def update_product_stock(id):
+    json = request.json
+    return jsonify(db.update_product_stock(id, json['used']))
+
 @app.route("/", methods=['POST'])
 def add_product():
     json = request.json
