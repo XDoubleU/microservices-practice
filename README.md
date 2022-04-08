@@ -7,7 +7,7 @@ The purpose of this project was to practice building a microservice application 
 - Use different API-technologies
 - Use Docker
 
-## Requirements
+## Used technologies
  - PostGres (database)
  - FastAPI (api-gateway)
  - Flask (product-service & order-service)
