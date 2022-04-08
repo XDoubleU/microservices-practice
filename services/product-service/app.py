@@ -20,3 +20,4 @@ def update_product_stock(id):
 def add_product():
     json = request.json
     return jsonify(db.add_product(json['name'], json['price'], json['stock']))
+

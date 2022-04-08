@@ -23,31 +23,46 @@ services:
       - order-service
 
   product-service:
+    hostname: product-service
     build: 
       dockerfile: services/product-service/Dockerfile
       context: ./
     ports:
-      - "4001:5000"
+      - "4010:5000"
+    networks:
+      - microservices
     depends_on:
       - db
 
   customer-service:
+    hostname: customer-service
     build: 
       dockerfile: services/customer-service/Dockerfile
       context: ./
     ports:
-      - "4002:4002"
+      - "4020:5000"
+    networks:
+      - microservices
     depends_on:
       - db
   
   order-service:
+    hostname: order-service
     build: 
       dockerfile: services/order-service/Dockerfile
       context: ./
     ports:
-      - "4003:5000"
+      - "4030:5000"
+    networks:
+      - microservices
     depends_on:
       - db
+      - product-service
+      - customer-service
+  
+networks:
+  microservices:
+    driver: bridge
 
   
 

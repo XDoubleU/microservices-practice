@@ -24,9 +24,9 @@ def add_order():
             customer = x
 
     if customer is None:
-        customer = customer_service.add(json['firstname'], json['lastname'])
+        customer = customer_service.add_customer(json['firstname'], json['lastname'])
 
-    for x in json['products']:
-        product_service.update_product_stock(x['product_id'], x['amount'])
+    for y in json['products']:
+        product_service.update_product_stock(y['product_id'], y['amount'])
 
     return jsonify(db.add_order(customer['id'], json['products']))
