@@ -23,7 +23,14 @@ services:
       dockerfile: services/product-service/Dockerfile
       context: ./
     ports:
-      - "5000:5000"
+      - "4001:5000"
+
+  customer-service:
+    build: 
+      dockerfile: services/customer-service/Dockerfile
+      context: ./
+    ports:
+      - "4002:4002"
 
   
 
