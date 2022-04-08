@@ -6,7 +6,6 @@ The purpose of this project was to practice building a microservice application 
 - Build a simple application with microservice architecture
 - Use different API-technologies
 - Use Docker
-- Use GitHub actions for CI
 
 ## Requirements
  - PostGres (database)
@@ -15,4 +14,4 @@ The purpose of this project was to practice building a microservice application 
  - Express.js (customer-service)
 
 ## Deployment
-docker-compose -f docker-compose.yml up
+`docker-compose -f docker-compose.yml up`
