@@ -2,8 +2,8 @@
 The purpose of this project was to practice building a microservice application.
 
 ## Microservice architecture
-![](docs/microservices_architecture.png)
+<img src="docs/microservices_architecture.png" height="250">
 
 ## Database architecture
-![](docs/database_architecture.png)
+<img src="docs/database_architecture.png" height="125">
 
