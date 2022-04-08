@@ -16,4 +16,4 @@ The purpose of this project was to practice building a microservice application 
  - ExpressJS (customer-service)
 
 ## Deployment
-TODO
+docker-compose -f docker-compose.yml up

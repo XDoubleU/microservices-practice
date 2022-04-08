@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    ports: 
+      - "6543:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_DB: microservices_db
+      POSTGRES_PASSWORD: example
