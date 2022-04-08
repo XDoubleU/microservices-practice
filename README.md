@@ -5,14 +5,13 @@ The purpose of this project was to practice building a microservice application 
 ## Goals
 - Build a simple application with microservice architecture
 - Use different API-technologies
-- Use docker
-- Use GitHub actions for CI
+- Use Docker
 
-## Requirements
+## Used technologies
  - PostGres (database)
  - FastAPI (api-gateway)
  - Flask (product-service & order-service)
  - Express.js (customer-service)
 
 ## Deployment
-docker-compose -f docker-compose.yml up
+`docker-compose -f docker-compose.yml up`
