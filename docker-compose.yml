@@ -11,10 +11,19 @@ services:
       POSTGRES_DB: microservices_db
       POSTGRES_PASSWORD: example
   
+  api-gateway:
+    build: 
+      dockerfile: api-gateway/Dockerfile
+      context: ./
+    ports:
+      - "4000:80"
+
   product-service:
     build: 
       dockerfile: services/product-service/Dockerfile
       context: ./
     ports:
       - "5000:5000"
+
+  
 

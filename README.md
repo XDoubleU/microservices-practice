@@ -10,10 +10,10 @@ The purpose of this project was to practice building a microservice application 
 
 ## Requirements
  - PostGres (database)
- - Go (api-gateway)
+ - FastAPI (api-gateway)
  - Flask (product-service)
- - ASP.NET (order-service)
- - ExpressJS (customer-service)
+ - Go (order-service)
+ - Express.js (customer-service)
 
 ## Deployment
 docker-compose -f docker-compose.yml up
