@@ -29,8 +29,6 @@ services:
       context: ./
     ports:
       - "4010:5000"
-    networks:
-      - microservices
     depends_on:
       - db
 
@@ -41,8 +39,6 @@ services:
       context: ./
     ports:
       - "4020:5000"
-    networks:
-      - microservices
     depends_on:
       - db
   
@@ -53,16 +49,11 @@ services:
       context: ./
     ports:
       - "4030:5000"
-    networks:
-      - microservices
     depends_on:
       - db
       - product-service
       - customer-service
-  
-networks:
-  microservices:
-    driver: bridge
+
 
   
 
