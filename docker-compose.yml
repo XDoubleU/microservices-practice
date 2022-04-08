@@ -17,6 +17,10 @@ services:
       context: ./
     ports:
       - "4000:80"
+    depends_on:
+      - product-service
+      - customer-service
+      - order-service
 
   product-service:
     build: 
@@ -24,6 +28,8 @@ services:
       context: ./
     ports:
       - "4001:5000"
+    depends_on:
+      - db
 
   customer-service:
     build: 
@@ -31,6 +37,8 @@ services:
       context: ./
     ports:
       - "4002:4002"
+    depends_on:
+      - db
   
   order-service:
     build: 
@@ -38,6 +46,8 @@ services:
       context: ./
     ports:
       - "4003:5000"
+    depends_on:
+      - db
 
   
 

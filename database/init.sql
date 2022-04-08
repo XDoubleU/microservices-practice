@@ -1,40 +1,40 @@
-CREATE TABLE "public.Products" (
-	"ID" serial NOT NULL,
-	"Name" VARCHAR(255) NOT NULL,
-	"Price" DECIMAL NOT NULL,
-	"Stock" integer NOT NULL,
-	CONSTRAINT "Products_pk" PRIMARY KEY ("ID")
+CREATE TABLE "products" (
+	"id" serial NOT NULL,
+	"name" VARCHAR(255) NOT NULL,
+	"price" DECIMAL NOT NULL,
+	"stock" integer NOT NULL,
+	CONSTRAINT "products_pk" PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
 );
 
 
 
-CREATE TABLE "public.Orders" (
-	"ID" serial NOT NULL,
-	"Customer_ID" integer NOT NULL,
-	CONSTRAINT "Orders_pk" PRIMARY KEY ("ID")
+CREATE TABLE "orders" (
+	"id" serial NOT NULL,
+	"customer_id" integer NOT NULL,
+	CONSTRAINT "orders_pk" PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
 );
 
 
 
-CREATE TABLE "public.Orders_Products" (
-	"Order_ID" integer NOT NULL,
-	"Product_ID" integer NOT NULL,
-	"Amount" integer NOT NULL
+CREATE TABLE "orders_products" (
+	"order_id" integer NOT NULL,
+	"product_id" integer NOT NULL,
+	"amount" integer NOT NULL
 ) WITH (
   OIDS=FALSE
 );
 
 
 
-CREATE TABLE "public.Customers" (
-	"ID" serial NOT NULL,
-	"Firstname" VARCHAR(255) NOT NULL,
-	"Lastname" VARCHAR(255) NOT NULL,
-	CONSTRAINT "Customers_pk" PRIMARY KEY ("ID")
+CREATE TABLE "customers" (
+	"id" serial NOT NULL,
+	"firstname" VARCHAR(255) NOT NULL,
+	"lastname" VARCHAR(255) NOT NULL,
+	CONSTRAINT "customers_pk" PRIMARY KEY ("id")
 ) WITH (
   OIDS=FALSE
 );
@@ -42,10 +42,10 @@ CREATE TABLE "public.Customers" (
 
 
 
-ALTER TABLE "Orders" ADD CONSTRAINT "Orders_fk0" FOREIGN KEY ("Customer_ID") REFERENCES "Customers"("ID");
+ALTER TABLE "orders" ADD CONSTRAINT "orders_fk0" FOREIGN KEY ("customer_id") REFERENCES "customers"("id");
 
-ALTER TABLE "Orders_Products" ADD CONSTRAINT "Orders_Products_fk0" FOREIGN KEY ("Order_ID") REFERENCES "Orders"("ID");
-ALTER TABLE "Orders_Products" ADD CONSTRAINT "Orders_Products_fk1" FOREIGN KEY ("Product_ID") REFERENCES "Products"("ID");
+ALTER TABLE "orders_products" ADD CONSTRAINT "orders_products_fk0" FOREIGN KEY ("order_id") REFERENCES "orders"("id");
+ALTER TABLE "orders_products" ADD CONSTRAINT "orders_products_fk1" FOREIGN KEY ("product_id") REFERENCES "products"("id");
 
 
 

@@ -1,13 +1,13 @@
-//Load express module with `require` directive
 var express = require('express')
+const db = require('./queries')
 var app = express()
-//Define port
+app.use(express.json())
 var port = 4002
-//Define request response in root URL (/)
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
-//Launch listening server on port 3000
+
+app.get('/', db.getCustomers)
+app.get('/:id', db.getCustomer)
+app.post('/', db.addCustomer)
+
 app.listen(port, function () {
   console.log('app listening on port ${port}!')
 })
