@@ -1,9 +1,27 @@
 # Microservices practice
-The purpose of this project was to practice building a microservice application.
 
-## Microservice architecture
+The purpose of this project was to practice building a microservice application using different technologies. The schematics can be found [here](#architecture).
+
+## Goals
+- Build a simple application with microservice architecture
+- Use different API-technologies
+- Use docker
+- Use GitHub actions for CI
+
+## Requirements
+ - PostGres (database)
+ - Go (api-gateway)
+ - Django (product-service)
+ - ASP.NET (order-service)
+ - ExpressJS (customer-service)
+
+## Deployment
+TODO
+
+
+## Architecture
+### Microservices
 <img src="docs/microservices_architecture.png" height="250">
 
-## Database architecture
+### Database
 <img src="docs/database_architecture.png" height="125">
-
